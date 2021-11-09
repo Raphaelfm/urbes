@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UrbES</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./logo.png" />
+    <link rel="manifest" href="href=/logo.png"/>
+    <link rel="mask-icon" href="./logo.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet" />
+    <link rel="stylesheet" media="all" href="./bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" media="all" href="./css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+<style>
+	#mapid{
+		height: 400px;
+		width: 100%;
+        border-radius: 20px;
+        margin-top: -50px;
+
+
+	}
+</style>
+
+</head>
+
+<body>
+
+    <!-- Start page -->
+    <div class="page">
+
+        <!-- Start header -->
+        <header class="header header-main">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/">
+                        <div class="navbar-logo">
+                            <img class="navbar-pic" src="http://demo.niceverynice.com/foundation/img/foundation.jpg" srcset="./logo.png 2x" alt="Foundation" />
+                        </div>
+                        <div class="navbar-group">
+                            <div class="navbar-title">UrbES</div>
+                            <div class="navbar-text">Sem iluminação? Buracos em ruas? </br>Falta de água? Marca na #UrbES!  </div>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                    <div class="collapse navbar-collapse" id="navbarDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#map">Reclame</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-drop" href="#contact">
+                                    <span>Sugestões?</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                        <a class="btn btn-primary" href="login.html">Acessar</a>
+                        <a class="btn btn-primary" href="CadastrarLogin.html">Cadastrar</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- End header -->
+            
+            <div class="section section-with-logos">
+                <div class="container">
+                 
+                    <div class="row">
+                        <div class="col-md-6 mb-5 mb-lg-0">
+                            <div class="wrap">
+                                <div class="theme" style="color: #b18b48;">Buracos na rua?</div>
+                                <h2 class="title title-2">Publique a sua reclamação com o UrbES.</h2>
+                                <div class="text">Envie a sua sugestão/reclamação associadas a localização atual.</div>
+                                <a class="btn btn-primary" href="#map">Marque no mapa abaixo a localização da sua reclamação!</a>
+                                <div class="accordion">
+                           
+                                        <div class="accordion-head">
+                                            <div class="accordion-preview">
+                                                <img class="accordion-pic" srcset="https://s2.glbimg.com/vGmcYUmU6Cb3w3Ek-ZRs_GQ1sN0=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/x/r/jKRAXYRDeuAk4Um8aMNQ/img-poste-kennedy-bdes-01-11-reg.mov-snapshot-00.37-2021.11.01-21.13.31-.jpg 1x" alt="" />
+                                                
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start banner -->
+            <div class="col-12 py-sm-5" >
+                <h2 class="font-weight-bold text-center" id="contact">Veja abaixo algumas das reclamações já inseridas no mapa.</h3>
+        <div class="inner" id="map">
+            <div class="section section-main" style="background: #f3c6bd00;">
+                <div class="d-flex flex-column flex-fill">
+                    <div class="flex-fill">
+                        <div class="bg-base-0 position-relative">
+                            <div class="container position-relative py-5 py-sm-6">
+                                <div class="row">
+                                    <object data="./mapa-preenchido.html" scrolling="no" height="400" width="140%" style="border-radius: 15px;"></object>
+                                     <!-- Start banner 
+                                    <div id="mapid"></div>
+                                     <!-- Start banner -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 py-sm-5" >
+            <h2 class="font-weight-bold text-center" id="contact">Não encontrou o que procura? Mande a sua sugestão para a gente! :) </h3>
+</br>
+            
+    <!-- BEGIN inner -->
+
+        <div class="section-white">
+          <div class="container container-sm">
+            <form class="contacts" name="formLogin" action="CadastroSugestao" method="post">
+                <div class="form-group">
+                    <label for="Email">Seu nome:</label>
+                    <input type="txt" name="txtNome" class="form-control" placeholder="Seu nome" required="">
+                  </div>
+              <div class="form-group">
+                <label for="Email">Seu endereço de e-mail:</label>
+                <input type="text" name="txtEmail" class="form-control" placeholder="seu@email.com" required="">
+              </div>
+              <div class="form-group">
+                <label for="Subject">Sugestões:</label>
+                <select name="txtTopico">
+                    <option value="saneamento">Saneamento</option>
+                    <option value="estradas">Estradas</option>
+                    <option value="energia">Energia Eletrica</option>
+                    <option value="mobilidade">Mobilidade</option>
+                    <option value="seguranca">Seguranca</option>
+                    <option value="outros">Outros Assuntos</option>
+                    </select><br>
+              </div>
+              <div class="form-group">
+                <label for="Message">Mensagem:</label>
+                <textarea class="form-control" name="txtSugestao" placeholder="Escreva aqui a sua mensagem..." rows="4" required=""></textarea>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">Enviar mensagem</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- END inner -->
+
+
+      
+
+     <!-- End page 
+      <section id="integrations">
+        <div class="container">
+            <div class="slider">
+                <div class="slide-track">
+                    
+    
+                    <div class="slide">
+                            <picture><img src="./mysql.png" alt="Zapier" height="50" width="132" data-not-lazy="" href="./html.png"></picture>
+                    </div>
+    
+                    <div class="slide">
+                        <picture><img src="./unimed.png" alt="Zapier" height="50" width="132" data-not-lazy="" href="./html.png"></picture>
+                </div>
+    
+                <div class="slide">
+                    <picture><img src="./Faculdade-Faesa.png" alt="Zapier" height="50" width="122" data-not-lazy="" href="./html.png"></picture>
+            </div>
+    
+            <div class="slide">
+                <picture><img src="./inflor.jpg" alt="Zapier" height="50" width="132" data-not-lazy="" href="./html.jpg"></picture>
+        </div>
+    
+        <div class="slide">
+            <picture><img src="./sicoob-logo-1.png" alt="Zapier" height="50" width="132" data-not-lazy="" href="./html.png"></picture>
+    </div>
+    
+    <div class="slide">
+        <picture><img src="./logo-aguia-branca.png" alt="Zapier" height="20" width="132" data-not-lazy="" href="./html.png"></picture>
+    </div>
+    
+    <div class="slide">
+    <picture><img src="./figma.png" alt="Zapier" height="50" width="150" data-not-lazy="" href="./html.png"></picture>
+    </div>
+    
+    <div class="slide">
+    <picture><img src="./sicoob.png" alt="Zapier" height="50" width="120" data-not-lazy="" href="./html.png"></picture>
+    </div>
+    
+    <div class="slide">
+    <picture><img src="./vale-logo-1-1.png" alt="Zapier" height="50" width="130" data-not-lazy="" href="./html.png"></picture>
+    </div>
+    
+    <div class="slide">
+    <picture><img src="./autoglass-logo-1.png" alt="Zapier" height="30" width="130" data-not-lazy="" href="./html.png"></picture>
+    </div>
+                    
+                </div>
+            </div>
+    </section>
+     <!-- End page -->
+
+            
+
+                            
+
+                
+            <!-- Start footer -->
+            <footer class="footer">
+                <div class="footer-section">
+                   
+                </div>
+                <div class="footer-down">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <nav class="footer-nav">
+                                    <a class="footer-link">Criado e desenvolvido por Jhony, Rafael, Marina e Weliton. Hack Faesa - 2021.</a>
+
+                                </nav>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End footer -->
+
+
+        <!-- End page -->
+
+        <!-- Start scripts -->
+        <script src="./jquery/jquery-3.3.1.min.js"></script>
+        <script src="./bootstrap/bootstrap.min.js"></script>
+        <script src="./scriptMapa.js"></script>
+        <script src="./app.js"></script>
+        <script src="scriptMapa.js"></script>
+        <!-- End scripts -->
+
+
+</body>
+
+</html>

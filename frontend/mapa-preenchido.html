@@ -1,0 +1,56 @@
+
+<html>
+    <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+       integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+       crossorigin=""/>
+    
+        <style>
+          body {
+            padding: 2;
+            margin: 2;
+          }
+          html, body, #map {
+            height: 98%;
+            width: 98%;
+            
+          }
+        </style>
+      </head>
+      <body>
+        <div id="map"></div>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+      <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+       integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+       crossorigin=""></script>
+           <script>
+        var pControle = ([-20.3109331, -40.3166177],[-20.3109330,-40.3166170]);
+    
+    
+    var initialCoordinates = [-20.310767067494094, -40.31441827371738];
+    
+    // UnB
+    var initialZoomLevel =14;
+    
+    
+    // create a map in the "map" div, set the view to a given place and zoom
+    var map = L.map('map').setView(initialCoordinates, initialZoomLevel);
+    
+    var marker7 = L.marker([-21.162721923972995, -40.993509292602546]).addTo(map);marker7.bindPopup("Reclamação: Pista com postes nos dois sentidos das vias.<br> Risco de acidentes: Alto risco.<br> Data de registro: 07-11-2021").openPopup(); 
+    var marker7 = L.marker([-20.310782899027643, -40.31448125839234]).addTo(map);marker7.bindPopup("Reclamação: Pista com muitos buracos nos dois sentidos das vias.<br> Risco de acidentes: Alto risco.<br> Data de registro: 07-11-2021").openPopup();
+    var marker7 = L.marker([-20.258654235389653, -40.29150009155274]).addTo(map);marker7.bindPopup("Reclamação: Via pouco iluminada nas duas vias.<br> Risco de acidentes: Alto risco.<br> Data de registro: 07-11-2021").openPopup();
+    var marker7 = L.marker([-20.32061292240475, -40.32603621482849]).addTo(map);marker7.bindPopup("Reclamação: Pouca iluminação nas duas vias.<br> Risco de acidentes: Alto risco.<br> Data de registro: 07-11-2021").openPopup();
+    var marker7 = L.marker([-20.29742031056651, -40.316648483276374]).addTo(map);marker7.bindPopup("Reclamação: Pouca iluminação nas duas vias.<br> Risco de acidentes: Alto risco.<br> Data de registro: 07-11-2021").openPopup();
+    var marker7 = L.marker([-20.34313812260861, -40.31209945678712]).addTo(map);marker7.bindPopup("Reclamação: Pouca iluminação nas duas vias.<br> Risco de acidentes: Alto risco.<br> Data de registro: 07-11-2021").openPopup();
+    var marker7 = L.marker([-20.193982321942322, -40.26175975799561]).addTo(map);marker7.bindPopup("Reclamação: Pouca iluminação nas duas vias.<br> Risco de acidentes: Alto risco.<br> Data de registro: 07-11-2021").openPopup();
+    var marker7 = L.marker([-20.21013268468227, -40.29832363128663]).addTo(map);marker7.bindPopup("Reclamação: Pouca iluminação nas duas vias.<br> Risco de acidentes: Alto risco.<br> Data de registro: 07-11-2021").openPopup();
+    var marker1 = L.marker([-20.3109331, -40.3166177]).addTo(map);
+    marker1.bindPopup("Você está aqui!").openPopup();
+    
+    // add an OpenStreetMap tile layer
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: 'Política e privacidade da <a href="#" target="new_blank">UrbES</a><br>&copy; Contribuidores do <a href="http://osm.org/copyright" target="new_blank">OpenStreetMap</a>'
+    }).addTo(map);
+        </script>
+      </body>
+    </html>
