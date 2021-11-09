@@ -7,7 +7,7 @@
 
 Foram desenvolvidas as seguintes sessões: área de cadastro de usuário (conectado com o banco de dados MySQL) área de login e a área logada. 
 
-**Utilizamos as tecnologias:** HTML5, CSS3, BootStrap5, Jquery, Javascript, Java e MySQL.
+**Utilizamos as tecnologias:** HTML5, CSS3, BootStrap5, Jquery, Leaflet, jJavascript, Java e MySQL.
 
 
 ## Demo:
